@@ -14,13 +14,37 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: Center(
-        child: Image.asset('assets/blue.png'),
-        //Image.network(''),
-        /*Image(
-          image: AssetImage('assets/blue.png'),
-          //image: NetworkImage('https://images.unsplash.com/photo-1536746803623-cef87080bfc8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=332&q=80'),
-        ),*/
+      body:Row(
+        children: <Widget>[
+          Expanded(
+              child: Image.asset('assets/blue.png'),
+              flex:3,
+          ),
+          Expanded(
+            flex: 1, //portion of the width (전체 flex에서)
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.cyan,
+              child:Text('1'),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.pinkAccent,
+              child:Text('2'),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.amber,
+              child:Text('3'),
+            ),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
